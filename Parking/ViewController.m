@@ -84,22 +84,21 @@ NSArray* resultArray;
 //    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     
     
-    static NSString *CustomCellIdentifier = @"mTableViewCell";
+    static NSString *CustomCellIdentifier = @"mTableCell";
     
-    UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CustomCellIdentifier] ;
-    }
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier forIndexPath:indexPath];
+
 
     
 
     
     @try {
-        cell.textLabel.text=resultArray[indexPath.row+1][5];
+//        cell.textLabel.text=resultArray[indexPath.row+1][5];
+        UILabel *address=(UILabel *)[cell.contentView viewWithTag:1];
         
+        address.text=resultArray[indexPath.row+1][5];
         
-//        self.mTableViewCell.address=resultArray[indexPath.row+1][5];
+
         
         return  cell;
     }
