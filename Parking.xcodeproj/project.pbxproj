@@ -21,6 +21,7 @@
 		A7ADDE0F1E2C663F000AF815 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ADDE071E2C663F000AF815 /* AFURLRequestSerialization.m */; };
 		A7ADDE101E2C663F000AF815 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ADDE091E2C663F000AF815 /* AFURLResponseSerialization.m */; };
 		A7ADDE111E2C663F000AF815 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ADDE0B1E2C663F000AF815 /* AFURLSessionManager.m */; };
+		A7C074421E34A7F6000E52AF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C074411E34A7F6000E52AF /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		A7ADDE091E2C663F000AF815 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		A7ADDE0A1E2C663F000AF815 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		A7ADDE0B1E2C663F000AF815 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		A7C074401E34A7F6000E52AF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		A7C074411E34A7F6000E52AF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 		A77809591E277E860090BC5C /* Parking */ = {
 			isa = PBXGroup;
 			children = (
+				A7C074401E34A7F6000E52AF /* BaseViewController.h */,
+				A7C074411E34A7F6000E52AF /* BaseViewController.m */,
 				A778095D1E277E860090BC5C /* AppDelegate.h */,
 				A778095E1E277E860090BC5C /* AppDelegate.m */,
 				A77809601E277E860090BC5C /* ViewController.h */,
@@ -382,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7ADDE111E2C663F000AF815 /* AFURLSessionManager.m in Sources */,
+				A7C074421E34A7F6000E52AF /* BaseViewController.m in Sources */,
 				A77809621E277E860090BC5C /* ViewController.m in Sources */,
 				A778095F1E277E860090BC5C /* AppDelegate.m in Sources */,
 				A7ADDE0D1E2C663F000AF815 /* AFNetworkReachabilityManager.m in Sources */,

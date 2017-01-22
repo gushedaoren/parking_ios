@@ -88,13 +88,13 @@ NSArray* resultArray;
     
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier forIndexPath:indexPath];
 
-
+    UILabel *address=(UILabel *)[cell.contentView viewWithTag:1];
     
 
     
     @try {
 //        cell.textLabel.text=resultArray[indexPath.row+1][5];
-        UILabel *address=(UILabel *)[cell.contentView viewWithTag:1];
+        
         
         address.text=resultArray[indexPath.row+1][5];
         
@@ -103,6 +103,7 @@ NSArray* resultArray;
         return  cell;
     }
     @catch (NSException *exception) {
+        address.text=@"null";
         return  cell;
            }
     @finally {
