@@ -11,16 +11,19 @@
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *mtableView;
+
 
 @end
 
 @implementation ViewController
-
+NSArray* resultArray;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.mtableView.dataSource=self;
     [self obtainData];
-    
+  
    
 }
 
@@ -48,13 +51,17 @@
 //        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
         //接下来一步一步解析。知道得到你想要的东西。
         NSDictionary* arrayDic =[responseObject objectAtIndex:0];
-        NSArray* resultArray = [arrayDic objectForKey:@"data"];
+        resultArray = [arrayDic objectForKey:@"data"];
         
     
         
-        NSArray* resultData = [NSString stringWithFormat:@"%@",[resultArray objectAtIndex:0]];
+       
         
-        NSLog(@"Data: %@", [responseObject[0] objectForKey:@"data"] [0][0]);
+        NSLog(@"Data: %@", resultArray[0][0]);
+        
+        [self.mtableView reloadData];
+        
+        
         
         
         
@@ -68,5 +75,43 @@
     
 }
 
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return resultArray.count-1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    
+    
+    static NSString *CustomCellIdentifier = @"mTableViewCell";
+    
+    UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CustomCellIdentifier] ;
+    }
+
+    
+
+    
+    @try {
+        cell.textLabel.text=resultArray[indexPath.row+1][5];
+        
+        
+//        self.mTableViewCell.address=resultArray[indexPath.row+1][5];
+        
+        return  cell;
+    }
+    @catch (NSException *exception) {
+        return  cell;
+           }
+    @finally {
+        // 结果处理
+        return cell;
+    }
+    
+    
+}
 
 @end
