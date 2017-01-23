@@ -202,6 +202,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="mapRootView" translatesAutoresizingMaskIntoConstraints="NO" id="5nS-Kq-DUq">
+                                <rect key="frame" x="8" y="241" width="369" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -212,6 +217,7 @@
                         <outlet property="label3" destination="dVl-dK-gEa" id="zTh-Br-iJR"/>
                         <outlet property="label4" destination="RIA-sV-d8D" id="tiO-sm-2pa"/>
                         <outlet property="label5" destination="Aku-ki-T4i" id="Sw8-a0-JoI"/>
+                        <outlet property="mapRootView" destination="5nS-Kq-DUq" id="jVc-bg-Rof"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpz-52-ez3" userLabel="First Responder" sceneMemberID="firstResponder"/>

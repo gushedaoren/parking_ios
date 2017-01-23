@@ -16,16 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
-//        [application setStatusBarStyle:UIStatusBarStyleLightContent];
-//        self.window.clipsToBounds =YES;
-//        self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
-//        
-//        //Added on 19th Sep 2013
-//        self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
-//    }
+//    请先启动BaiduMapManager
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"7D9Tx4khrtXgtBRV8GTWX5Gbem6y1NLO"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"_mapManager start failed!");
+    }else{
+        NSLog(@"_mapManager start success!");
+    }
     return YES;
 }
 

@@ -28,6 +28,8 @@
 	<true/>
 	<key>UIStatusBarHidden</key>
 	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>E停车</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
