@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AFNetworking.h"//主要用于网络请求方法
+#import "DetailViewController.h"
 
 
 @interface ViewController ()
@@ -98,6 +99,8 @@ NSArray* resultArray;
         
         address.text=resultArray[indexPath.row+1][5];
         
+        
+        
 
         
         return  cell;
@@ -111,6 +114,25 @@ NSArray* resultArray;
         return cell;
     }
     
+    
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"toDetail"])
+    {         DetailViewController *page2=segue.destinationViewController;
+        
+        
+             NSIndexPath *indexPath=self.mtableView.indexPathForSelectedRow;
+        
+//            NSLog(@"%@",resultArray[indexPath.row+1]);
+        
+             page2.data=resultArray[indexPath.row+1] ;
+        
+        
+        
+    }
     
 }
 

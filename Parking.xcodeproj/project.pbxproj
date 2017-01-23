@@ -22,6 +22,7 @@
 		A7ADDE101E2C663F000AF815 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ADDE091E2C663F000AF815 /* AFURLResponseSerialization.m */; };
 		A7ADDE111E2C663F000AF815 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ADDE0B1E2C663F000AF815 /* AFURLSessionManager.m */; };
 		A7C074421E34A7F6000E52AF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C074411E34A7F6000E52AF /* BaseViewController.m */; };
+		A7C074451E34AEE7000E52AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C074441E34AEE7000E52AF /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		A7ADDE0B1E2C663F000AF815 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		A7C074401E34A7F6000E52AF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		A7C074411E34A7F6000E52AF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		A7C074431E34AEE7000E52AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A7C074441E34AEE7000E52AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				A77809681E277E860090BC5C /* LaunchScreen.storyboard */,
 				A778096B1E277E860090BC5C /* Info.plist */,
 				A778095A1E277E860090BC5C /* Supporting Files */,
+				A7C074431E34AEE7000E52AF /* DetailViewController.h */,
+				A7C074441E34AEE7000E52AF /* DetailViewController.m */,
 			);
 			path = Parking;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				A7ADDE0D1E2C663F000AF815 /* AFNetworkReachabilityManager.m in Sources */,
 				A778095C1E277E860090BC5C /* main.m in Sources */,
 				A7ADDE0E1E2C663F000AF815 /* AFSecurityPolicy.m in Sources */,
+				A7C074451E34AEE7000E52AF /* DetailViewController.m in Sources */,
 				A7ADDE0F1E2C663F000AF815 /* AFURLRequestSerialization.m in Sources */,
 				A7ADDE101E2C663F000AF815 /* AFURLResponseSerialization.m in Sources */,
 				A7ADDE0C1E2C663F000AF815 /* AFHTTPSessionManager.m in Sources */,
