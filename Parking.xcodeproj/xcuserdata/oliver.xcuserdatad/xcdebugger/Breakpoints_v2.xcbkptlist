@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851306.267424"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-setLabelData::"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,74 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851306.267424"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "-getCoordinateByAddress:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[DetailViewController getCoordinateByAddress:]_block_invoke"
+                  moduleName = "Parking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliver/Documents/ios_workspace/Parking/Parking/DetailViewController.m"
+                  timestampString = "506853215.276785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "Parking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliver/Documents/ios_workspace/Parking/Parking/DetailViewController.m"
+                  timestampString = "506853215.278643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "Parking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliver/Documents/ios_workspace/Parking/Parking/DetailViewController.m"
+                  timestampString = "506853215.280246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parking/DetailViewController.m"
+            timestampString = "506915045.330631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-getCoordinateByAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +201,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851306.267424"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-getCoordinateByAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,27 +217,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851306.267424"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-getCoordinateByAddress:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Parking/DetailViewController.m"
-            timestampString = "506851306.267424"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-getCoordinateByAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +233,41 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851526.175654"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "217"
+            endingLineNumber = "217">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parking/DetailViewController.m"
+            timestampString = "506915045.330631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "-mapView:annotationViewForBubble:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parking/DetailViewController.m"
+            timestampString = "506915045.330631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "@implementation DetailViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -202,13 +279,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Parking/DetailViewController.m"
-            timestampString = "506851526.175654"
+            timestampString = "506915045.330631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "@implementation DetailViewController"
-            landmarkType = "3">
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-openAppleMap::"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

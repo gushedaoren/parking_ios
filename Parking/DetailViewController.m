@@ -10,10 +10,14 @@
 
 
 
+
 @interface DetailViewController ()
 {
     CLGeocoder *_geocoder;
     BMKMapView* mapView ;
+    NSString *mAddress;
+    CLLocationCoordinate2D *mCoor;
+    
 
 
 }
@@ -118,8 +122,8 @@
             }
         }
         
-        NSString *name=[placemark.addressDictionary valueForKey:@"Name"] ;
-        NSLog(@"address %@",name);
+        mAddress=[placemark.addressDictionary valueForKey:@"Name"] ;
+        NSLog(@"address %@",mAddress);
         
         CLLocation *location=placemark.location;//位置
 
@@ -142,6 +146,7 @@
 -(void)addPin:(double) mlatitude:(double) mlongitude{
     // 添加一个PointAnnotation
     BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+  
     CLLocationCoordinate2D coor;
     coor.latitude =mlatitude;
     coor.longitude = mlongitude;
@@ -151,18 +156,52 @@
     
     [mapView addAnnotation:annotation];
     [mapView setCenterCoordinate:coor];
+    mCoor=&coor;
+    
 
 }
 
-//// Override
-//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-//{
-//    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-//        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-//        newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
-//        newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
-//        return newAnnotationView;
-//    }
-//    return nil;
-//}
+
+-(void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view{
+    
+    
+    [ self openAppleMap:mCoor :mAddress ];
+    
+    
+}
+
+-(void)openAppleMap:(CLLocationCoordinate2D*)coords2:(NSString*)address{
+    //当前的位置
+    
+    MKMapItem *currentLocation = [MKMapItem mapItemForCurrentLocation];
+    
+    //起点
+    
+    //MKMapItem *currentLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:coords1 addressDictionary:nil]];
+    
+    //目的地的位置
+    
+    MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:*coords2 addressDictionary:nil]];
+    
+    
+    
+    toLocation.name = @"目的地";
+    
+ 
+        
+    toLocation.name =address;
+ 
+    
+    
+    
+    NSArray *items = [NSArray arrayWithObjects:currentLocation, toLocation, nil];
+    
+    NSDictionary *options = @{ MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving, MKLaunchOptionsMapTypeKey: [NSNumber numberWithInteger:MKMapTypeStandard], MKLaunchOptionsShowsTrafficKey:@YES };
+    
+    //打开苹果自身地图应用，并呈现特定的item
+    
+    [MKMapItem openMapsWithItems:items launchOptions:options];
+}
+
+
 @end
