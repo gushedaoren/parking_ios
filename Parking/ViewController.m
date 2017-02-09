@@ -9,21 +9,41 @@
 #import "ViewController.h"
 #import "AFNetworking.h"//主要用于网络请求方法
 #import "DetailViewController.h"
+#import "Tab2ViewController.h"
+
 
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *mtableView;
+{
 
+  
+}
+
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
+
+
+@property (weak, nonatomic) IBOutlet UIView *mrootview;
+
+@property(nonatomic,strong)Tab2ViewTool *tab2ViewTool;
+
+@property(nonatomic,strong)Tab1ViewTool *tab1ViewTool;
 
 @end
 
+
 @implementation ViewController
-NSArray* resultArray;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.mtableView.dataSource=self;
-    [self obtainData];
+
+   
+    
+    self.tab2ViewTool =[[Tab2ViewTool alloc]init];
+    self.tab1ViewTool =[[Tab1ViewTool alloc]init];
+
+
   
    
 }
@@ -34,106 +54,27 @@ NSArray* resultArray;
     // Dispose of any resources that can be recreated.
 }
 
-
--(void)obtainData
-{
-    // 启动系统风火轮
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+- (IBAction)segmentValueChanged:(id)sender {
+    NSInteger index= [sender selectedSegmentIndex];
+   
     
-    NSString *URLString = @"http://10.10.2.44:3000";
-
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:URLString parameters:NULL progress:^(NSProgress * _Nonnull downloadProgress) {
+    if(index==1){
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        NSLog(@"JSON: %@", responseObject);
-//        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-        //接下来一步一步解析。知道得到你想要的东西。
-        NSDictionary* arrayDic =[responseObject objectAtIndex:0];
-        resultArray = [arrayDic objectForKey:@"data"];
+//         tab2View *tabview=[[tab2View alloc]init] ;
         
-    
-        
-       
-        
-        NSLog(@"Data: %@", resultArray[0][0]);
-        
-        [self.mtableView reloadData];
+        [self.tab2ViewTool initView:self.mrootview];
         
         
-        
-        
-        
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"JSON: %@", error);
-
-    }];
-    
-    
-}
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return resultArray.count-1;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    
-    
-    static NSString *CustomCellIdentifier = @"mTableCell";
-    
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier forIndexPath:indexPath];
-
-    UILabel *address=(UILabel *)[cell.contentView viewWithTag:1];
-    
-
-    
-    @try {
-//        cell.textLabel.text=resultArray[indexPath.row+1][5];
-        
-        
-        address.text=resultArray[indexPath.row+1][5];
-        
-        
-        
-
-        
-        return  cell;
+    }else{
+         [self.tab1ViewTool initView:self.mrootview];
     }
-    @catch (NSException *exception) {
-        address.text=@"null";
-        return  cell;
-           }
-    @finally {
-        // 结果处理
-        return cell;
-    }
+   
     
     
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
     
-    if([segue.identifier isEqualToString:@"toDetail"])
-    {         DetailViewController *page2=segue.destinationViewController;
-        
-        
-             NSIndexPath *indexPath=self.mtableView.indexPathForSelectedRow;
-        
-//            NSLog(@"%@",resultArray[indexPath.row+1]);
-        
-             page2.data=resultArray[indexPath.row+1] ;
-        
-        
-        
-    }
-    
-}
 
 @end

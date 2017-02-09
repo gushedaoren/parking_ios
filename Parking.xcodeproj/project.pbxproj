@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7049A531E4C02300091F830 /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7049A521E4C02300091F830 /* Tab2ViewController.m */; };
 		A778095C1E277E860090BC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A778095B1E277E860090BC5C /* main.m */; };
 		A778095F1E277E860090BC5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A778095E1E277E860090BC5C /* AppDelegate.m */; };
 		A77809621E277E860090BC5C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A77809611E277E860090BC5C /* ViewController.m */; };
@@ -36,6 +37,9 @@
 		A7C0746E1E35B037000E52AF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C0746D1E35B037000E52AF /* CoreTelephony.framework */; };
 		A7C074701E35B044000E52AF /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C0746F1E35B044000E52AF /* libstdc++.6.0.9.tbd */; };
 		A7C074721E35D086000E52AF /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C074711E35D086000E52AF /* mapapi.bundle */; };
+		A7CA50141E4C14260038C448 /* Tab2ViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CA50131E4C14260038C448 /* Tab2ViewTool.m */; };
+		A7CA50171E4C30140038C448 /* Tab1ViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CA50161E4C30140038C448 /* Tab1ViewTool.m */; };
+		A7CA50201E4C47120038C448 /* ParkingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CA501F1E4C47120038C448 /* ParkingListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7049A511E4C02300091F830 /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
+		A7049A521E4C02300091F830 /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
 		A77809571E277E860090BC5C /* Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A778095B1E277E860090BC5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A778095D1E277E860090BC5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +108,12 @@
 		A7C0746D1E35B037000E52AF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A7C0746F1E35B044000E52AF /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		A7C074711E35D086000E52AF /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		A7CA50121E4C14260038C448 /* Tab2ViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewTool.h; sourceTree = "<group>"; };
+		A7CA50131E4C14260038C448 /* Tab2ViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewTool.m; sourceTree = "<group>"; };
+		A7CA50151E4C30140038C448 /* Tab1ViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab1ViewTool.h; path = ../Tab1ViewTool.h; sourceTree = "<group>"; };
+		A7CA50161E4C30140038C448 /* Tab1ViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab1ViewTool.m; path = ../Tab1ViewTool.m; sourceTree = "<group>"; };
+		A7CA501E1E4C47120038C448 /* ParkingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkingListCell.h; sourceTree = "<group>"; };
+		A7CA501F1E4C47120038C448 /* ParkingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkingListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,13 +179,21 @@
 		A77809591E277E860090BC5C /* Parking */ = {
 			isa = PBXGroup;
 			children = (
+				A7CA50151E4C30140038C448 /* Tab1ViewTool.h */,
+				A7CA50161E4C30140038C448 /* Tab1ViewTool.m */,
+				A7CA501E1E4C47120038C448 /* ParkingListCell.h */,
+				A7CA501F1E4C47120038C448 /* ParkingListCell.m */,
 				A7C074401E34A7F6000E52AF /* BaseViewController.h */,
+				A7049A511E4C02300091F830 /* Tab2ViewController.h */,
+				A7049A521E4C02300091F830 /* Tab2ViewController.m */,
 				A7C074411E34A7F6000E52AF /* BaseViewController.m */,
 				A778095D1E277E860090BC5C /* AppDelegate.h */,
 				A778095E1E277E860090BC5C /* AppDelegate.m */,
 				A77809601E277E860090BC5C /* ViewController.h */,
 				A77809611E277E860090BC5C /* ViewController.m */,
 				A77809631E277E860090BC5C /* Main.storyboard */,
+				A7CA50121E4C14260038C448 /* Tab2ViewTool.h */,
+				A7CA50131E4C14260038C448 /* Tab2ViewTool.m */,
 				A77809661E277E860090BC5C /* Assets.xcassets */,
 				A77809681E277E860090BC5C /* LaunchScreen.storyboard */,
 				A778096B1E277E860090BC5C /* Info.plist */,
@@ -445,15 +465,19 @@
 			files = (
 				A7ADDE111E2C663F000AF815 /* AFURLSessionManager.m in Sources */,
 				A7C074421E34A7F6000E52AF /* BaseViewController.m in Sources */,
+				A7CA50201E4C47120038C448 /* ParkingListCell.m in Sources */,
 				A77809621E277E860090BC5C /* ViewController.m in Sources */,
+				A7CA50141E4C14260038C448 /* Tab2ViewTool.m in Sources */,
 				A778095F1E277E860090BC5C /* AppDelegate.m in Sources */,
 				A7ADDE0D1E2C663F000AF815 /* AFNetworkReachabilityManager.m in Sources */,
+				A7CA50171E4C30140038C448 /* Tab1ViewTool.m in Sources */,
 				A778095C1E277E860090BC5C /* main.m in Sources */,
 				A7ADDE0E1E2C663F000AF815 /* AFSecurityPolicy.m in Sources */,
 				A7C074451E34AEE7000E52AF /* DetailViewController.m in Sources */,
 				A7ADDE0F1E2C663F000AF815 /* AFURLRequestSerialization.m in Sources */,
 				A7ADDE101E2C663F000AF815 /* AFURLResponseSerialization.m in Sources */,
 				A7ADDE0C1E2C663F000AF815 /* AFHTTPSessionManager.m in Sources */,
+				A7049A531E4C02300091F830 /* Tab2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

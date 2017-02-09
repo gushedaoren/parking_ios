@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-
-@interface ViewController : BaseViewController <UITableViewDataSource>
-
+#import "Tab2ViewTool.h"
+#import "Tab1ViewTool.h"
+@interface ViewController : BaseViewController 
 
 
 
