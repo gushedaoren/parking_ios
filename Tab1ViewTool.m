@@ -174,14 +174,16 @@
     return nil;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DetailViewController *pageDetial=[[DetailViewController alloc]init];
 
-//    UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-//    NSLog(@"%@",rootViewController.navigationController);
+
+    
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+     DetailViewController *detail=[storyBoard instantiateViewControllerWithIdentifier:@"detailview"];
     
     
-    [mNavigationController pushViewController:pageDetial animated:true];
-
+    
+    [mNavigationController pushViewController:detail animated:true];
     
    
     

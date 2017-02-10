@@ -69,7 +69,9 @@
         
          [self.tab1ViewTool initView:self.mrootview];
         
-               
+        
+        
+        
         NSLog(@"ashdkuashdkjhasjk%@",self.navigationController);
         [self.tab1ViewTool setMNavigationController:self.navigationController];
         

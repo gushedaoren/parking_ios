@@ -117,7 +117,7 @@
         <!--Detail View Controller-->
         <scene sceneID="tiB-JL-Xb7">
             <objects>
-                <viewController id="Mu7-eS-0oJ" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mu7-eS-0oJ" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AX4-qY-jhi"/>
                         <viewControllerLayoutGuide type="bottom" id="4U3-Cf-ajn"/>
