@@ -8,10 +8,22 @@
 
 #import "Tab1ViewTool.h"
 
-@implementation Tab1ViewTool{
+
+@interface Tab1ViewTool ()
+{
     UITableView *mtableView;
     NSArray* resultArray;
+    UIViewController *superVC;
+    
 }
+
+
+@end
+
+@implementation Tab1ViewTool
+@synthesize mNavigationController;
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -36,6 +48,7 @@
     
     
     mtableView.dataSource=self;
+    mtableView.delegate=self;
     
     
     [self obtainData];
@@ -150,21 +163,30 @@
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+- (UIViewController *)viewController:(UIView *)view{
     
-    if([segue.identifier isEqualToString:@"toDetail"])
-    {         DetailViewController *page2=segue.destinationViewController;
-        
-        
-        NSIndexPath *indexPath=mtableView.indexPathForSelectedRow;
-        
-        //            NSLog(@"%@",resultArray[indexPath.row+1]);
-        
-        page2.data=resultArray[indexPath.row+1] ;
-        
-        
-        
-    }
+    UIResponder *responder = view;
+    while ((responder = [responder nextResponder]))
+        if ([responder isKindOfClass: [UIViewController class]])
+            return (UIViewController *)responder;
+    
+    return nil;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailViewController *pageDetial=[[DetailViewController alloc]init];
+
+//    UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+//    NSLog(@"%@",rootViewController.navigationController);
+    
+    
+    superVC = [self viewController:self];
+    
+    [superVC.navigationController pushViewController:pageDetial animated:YES];
+    
+   
+    
+}
+
 
 @end

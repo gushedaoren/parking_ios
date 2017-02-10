@@ -42,7 +42,7 @@
     
     self.tab2ViewTool =[[Tab2ViewTool alloc]init];
     self.tab1ViewTool =[[Tab1ViewTool alloc]init];
-
+    
 
   
    
@@ -66,7 +66,16 @@
         
         
     }else{
+        
          [self.tab1ViewTool initView:self.mrootview];
+        
+        UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+
+        
+        NSLog(@"ashdkuashdkjhasjk%@",rootViewController.navigationController);
+        [self.tab1ViewTool setMNavigationController:rootViewController.navigationController];
+        
+        
     }
    
     

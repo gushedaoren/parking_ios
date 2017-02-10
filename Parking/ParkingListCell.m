@@ -35,6 +35,7 @@
     self.label1.backgroundColor = [UIColor clearColor];
     self.label1.numberOfLines = 2;
     [self.contentView addSubview:self.label1];
+    
 
 }
 
