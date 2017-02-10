@@ -69,11 +69,9 @@
         
          [self.tab1ViewTool initView:self.mrootview];
         
-        UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-
-        
-        NSLog(@"ashdkuashdkjhasjk%@",rootViewController.navigationController);
-        [self.tab1ViewTool setMNavigationController:rootViewController.navigationController];
+               
+        NSLog(@"ashdkuashdkjhasjk%@",self.navigationController);
+        [self.tab1ViewTool setMNavigationController:self.navigationController];
         
         
     }

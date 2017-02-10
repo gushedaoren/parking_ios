@@ -180,9 +180,8 @@
 //    NSLog(@"%@",rootViewController.navigationController);
     
     
-    superVC = [self viewController:self];
-    
-    [superVC.navigationController pushViewController:pageDetial animated:YES];
+    [mNavigationController pushViewController:pageDetial animated:true];
+
     
    
     
