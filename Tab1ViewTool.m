@@ -181,9 +181,9 @@
     
      DetailViewController *detail=[storyBoard instantiateViewControllerWithIdentifier:@"detailview"];
     
+       [detail setData:resultArray[indexPath.row+1]];
     
-    
-    [mNavigationController pushViewController:detail animated:true];
+        [mNavigationController pushViewController:detail animated:true];
     
    
     
